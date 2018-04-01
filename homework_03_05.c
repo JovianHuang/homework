@@ -13,9 +13,8 @@
 
 int main(int argc, char const *argv[])
 {
-	int integer;
+	int integer, i;
 	scanf("%d", &integer);
-    int i;
 	for (i = 0; i < 11; i++)
 	{
 		printf("%d", integer);

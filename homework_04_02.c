@@ -13,23 +13,6 @@
 
 int main(int argc, char const *argv[])
 {
-	// char letter;
-	// letter = getchar();	// Get the letter from user
-
-	// int columns = letter - 64;	// Num of columns
-	// int spaces;
-
-	// for (columns; columns > 0; columns--)
-	// {
-	// 	int spaces = columns -1;
-	// 	for (spaces; spaces > 0; spaces--)
-	// 		printf("0");
-	// 	for (ch; ch <= lim_of_letter; ch++)
-
-	// 		printf("%c\n", ch);
-	// 	printf("\n");
-	// }
-
 	int i, j, columns;
 	char letter, k;
 	letter = getchar();

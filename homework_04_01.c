@@ -23,14 +23,12 @@ int main(int argc, char const *argv[])
 			ch = '!';
 			putchar(ch);
 			count++;
-			// continue;
 		}
 		else if (ch == '!')
 		{
 			putchar(ch);
 			putchar(ch);
 			count++;
-			// continue;
 		}
 		else if (ch == '#')
 			break;

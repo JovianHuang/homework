@@ -17,12 +17,12 @@ int main(int argc, char const *argv[])
 
 	// Declare two arrays that stores the number of days in each month
 	int arrMonth_inLeap[12] = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-	int arrMonth_inFrac[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+	int arrMonth_inCom[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
 	if ((!(year%4)) && year%100 || !(year%400))
 		printf("%d\n", arrMonth_inLeap[month-1]);
 	else
-		printf("%d\n", arrMonth_inFrac[month-1]);
+		printf("%d\n", arrMonth_inCom[month-1]);
 
 	return 0;
 }

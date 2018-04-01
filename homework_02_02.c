@@ -27,8 +27,7 @@ int main(int argc, char const *argv[])
 		printf("%.2f\n", y);
 	}
 	else
-	{
 		printf("overflow\n");
-	}
+	
 	return 0;
 }

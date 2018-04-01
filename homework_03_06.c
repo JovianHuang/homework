@@ -12,12 +12,11 @@
 
 int main(int argc, char const *argv[])
 {
-	int integer;
+	int integer, i;
+	int flag = 1;
 	scanf("%d", &integer);
 	if (integer > 0)
 	{
-		int flag = 1;
-		int i;
 		for (i = 2; i < integer; i++)
 		{
 			if (integer % i == 0)

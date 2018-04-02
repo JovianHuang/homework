@@ -15,7 +15,6 @@ int main(int argc, char const *argv[])
 	int t = 0;
 	int n, u, d;
 	scanf("%d%d%d", &n, &u, &d);
-
 	if (n > u)
 	{
 		while (1)
@@ -35,6 +34,6 @@ int main(int argc, char const *argv[])
 		t = 1;
 
 	printf("%d\n", t);
-
+	
 	return 0;
 }

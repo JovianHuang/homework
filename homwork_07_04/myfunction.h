@@ -81,7 +81,7 @@ void PrintAdvancedUnit(int i)
 
 void PrintItAll(int arrNumSplited[][COLUMN])
 {
-		int i, j;
+	int i, j;
 	for (i = 0; i < ROW; i++)
 	{	
 		/* 	To judge whether are all digits in this row == 0, if not, 

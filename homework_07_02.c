@@ -5,7 +5,7 @@
 * @Filename:	homework_07_02.c
 * @Description:	A homework which requires that the program be written to
 				balabala(lazy)
-* @Version:		1.1.0.180418_alpha
+* @Version:		1.1.2.180423_alpha
 * =========================================================================== *
 */
 #include <stdio.h>
@@ -35,8 +35,8 @@ int main(int argc, char const *argv[])
 
 int SearchMax(int ibound, int iarrGrade[][5], int iSub[])
 {
-	int i, j, max;
-	int sub_row = 0, sub_column = 0;
+	int i, j;
+	int max = 0;
 	for (i = 0; i < ibound; i++)
 	{
 		for (j = 0; j < 5; j++)

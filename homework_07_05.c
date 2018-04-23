@@ -5,13 +5,15 @@
 * @Filename:	homework_07_05.c
 * @Description:	A homework which requires that the program be written to
 				find prime
-* @Version:		2.2.3.180419_alpha
+* @Version:		2.3.2.180422_alpha
 * =========================================================================== *
 */
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
 #include <stdbool.h>
+#define LIMIT 2000000
+			//0123456
 
 int Prime(int);
 void Filter(_Bool[], int);
@@ -21,16 +23,13 @@ int main(int argc, char const *argv[])
 	int bound, i;
 	scanf("%d", &bound);
 
-	_Bool arrPrime[bound];
-	
+	_Bool arrPrime[LIMIT];
 	// Initialization the array. 
 	arrPrime[1] = arrPrime[0] = 0;
-	arrPrime[3] = arrPrime[2] = 1;
-	for (i = 4; i < bound; i += 2)
-	{
-		arrPrime[i] = 0;	// All even except 2 aren't prime.
-		arrPrime[i+1] = 1;	// Assume all odd are prime.
-	}
+	arrPrime[2] = 1;
+	for (i = 3; i < LIMIT; i ++)
+		arrPrime[i] = i % 2 == 0 ? 0 : 1;
+		// All even except 2 aren't prime. Assume all odd are prime.
 
 	Filter(arrPrime, bound);
 	
@@ -64,6 +63,7 @@ void Filter(_Bool arrPrime[], int bound)
 	int i;
 	for (i = 3; i < bound; i++)
 	{
+		int index = 0;
 		if (!(arrPrime[i]))	// Skip composite number
 			continue;
 
@@ -71,11 +71,11 @@ void Filter(_Bool arrPrime[], int bound)
 		{
 			arrPrime[i] = 1;
 
-			int j, subs;
-			for (j = 2; subs < bound; j++)
+			int j;
+			for (j = 2; index < bound; j++)
 			{
-				subs = i * j;
-				arrPrime[subs] = 0;
+				index = i * j;
+				arrPrime[index] = 0;
 			}
 		}
 	}

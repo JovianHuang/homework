@@ -17,9 +17,7 @@ int main(int argc, char const *argv[])
 	scanf("%d", &n);
 
 	for (i = 0; i < n; i++)
-	{
 		sum += i + 1;
-	}
 	printf("sum=%d\n", sum);
 
 	return 0;

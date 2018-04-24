@@ -13,19 +13,19 @@
 int main(int argc, char const *argv[])
 {
 	int integer, i;
-	int flag = 1;
+	int found = 1;
 	scanf("%d", &integer);
 	if (integer > 0)
 	{
 		for (i = 2; i < integer; i++)
 		{
-			if (integer % i == 0)
+			if (!(integer % i))
 			{
-				flag = 0;
+				found = 0;
 				break;
 			}
 		}
-		if (flag)
+		if (found)
 			printf("Y\n");
 		else
 			printf("N\n");

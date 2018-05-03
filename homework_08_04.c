@@ -33,7 +33,11 @@ void DelSpace(char *str)
 	const int space = 32;
 	for (i = 0; i < strlen(str); i++)
 	{
-		if (!(str[i] - 32))
+		if (!(str[i] - space))
+		{
 			strcpy(str + i, str + i + 1);
+			i--;
+			printf("%s\n", str);
+		}
 	}
 }

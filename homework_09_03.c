@@ -18,31 +18,31 @@ int main(int argc, char const *argv[])
 	int target;
 	scanf("%d", &target);
 
-	int indexLeft = 0;
-	int indexRight = sizeof arrData / sizeof (int);
+	int left = 0;
+	int right = sizeof arrData / sizeof (int);
 
-	printf("%d\n", bi_search(arrData, target, indexLeft, indexRight));
+	printf("%d\n", bi_search(arrData, target, left, right));
 
 	return 0;
 }
 
-int bi_search(int arrData[], int target, int indexLeft, int indexRight)
+int bi_search(int arrData[], int target, int left, int right)
 {
 	int result;
-	int indexMid = (indexLeft + indexRight) / 2;
+	int mid = (left + right) / 2;
 
-	if (indexMid == indexRight || indexMid == indexLeft)
+	if (mid == right || mid == left)
 		result = -1;
-	else if (target == arrData[indexMid])
-		result = indexMid;
+	else if (target == arrData[mid])
+		result = mid;
 	else
 	{
-		if (target > arrData[indexMid])
-			indexLeft = indexMid;
+		if (target > arrData[mid])
+			left = mid;
 		else
-			indexRight = indexMid;
+			right = mid;
 
-		result = bi_search(arrData, target, indexLeft, indexRight);
+		result = bi_search(arrData, target, left, right);
 	}
 
 	return result;
